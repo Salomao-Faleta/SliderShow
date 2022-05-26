@@ -1,0 +1,75 @@
+*{box-sizing: border-box;}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    height: 100vh;
+    background-color: #CCC;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    height: 50px;
+    background-color: red;
+}
+
+.slider{
+    flex: 1;
+    overflow: hidden;
+}
+
+.slider--width{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    transition: 1s ease;
+    transition-delay: 0.1s;
+    transition-duration: width; 
+    transition-timing-function: cubic-bezier(1,0,.01,.99);
+
+    /*
+        1° - AS DICAS DO TRANSITION -> CURSO DE HTMLH5, CSS3 e JS DA UDEMY;
+        2° - SITE DO TRANSITION: cubic-bezier.com
+
+    */
+
+
+}
+
+.slider--item{
+    width: 100vw;
+    height: inherit;
+    background-position: center;
+    background-size: cover;
+}
+
+.slider--controls{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider--control{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.slider--control:hover{
+    box-shadow: 0px 0px 20px white;
+}
